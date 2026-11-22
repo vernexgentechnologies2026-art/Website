@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+@import './theme.css';
+@import './animations.css';
+@import './globals.css';
+
+/* Expose the brand tokens to Tailwind utilities (bg-surface, text-head, text-gold, font-heading …) */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface2);
+  --color-head: var(--head);
+  --color-body: var(--text);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-gold: var(--brand-gold);
+  --color-gold-light: var(--brand-gold-light);
+  --color-gold-deep: var(--brand-gold-deep);
+  --color-navy: var(--brand-navy);
+  --color-slate-ink: var(--brand-slate);
+  --font-heading: var(--fh);
+  --font-body: var(--fb);
+  --radius-brand: var(--r);
+}

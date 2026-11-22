@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vernexgentech.in/sitemap.xml

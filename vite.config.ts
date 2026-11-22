@@ -1,0 +1,20 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'vite';
+import { staticRoutes } from './build/static-routes.ts';
+
+const root = path.dirname(fileURLToPath(import.meta.url));
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss(), staticRoutes()],
+  resolve: {
+    alias: { '@': path.resolve(root, 'src') },
+  },
+  build: {
+    target: 'es2022',
+    sourcemap: false,
+  },
+});
